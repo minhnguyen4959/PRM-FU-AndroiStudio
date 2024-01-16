@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">fptu</string>
+
+    <string-array name="campus">
+        <item>HOA LAC</item>
+        <item>HO CHI MINH</item>
+        <item>CAN THO</item>
+        <item>DA NANG</item>
+    </string-array>
+
+    <string name="username">username</string>
+    <string name="password">password</string>
+
+
+</resources>
