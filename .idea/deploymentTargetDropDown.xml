@@ -8,6 +8,12 @@
       <entry key="MainActivity">
         <State />
       </entry>
+      <entry key="ProductDetailsActivity">
+        <State />
+      </entry>
+      <entry key="ProductListActivity">
+        <State />
+      </entry>
       <entry key="TestTheme">
         <State />
       </entry>

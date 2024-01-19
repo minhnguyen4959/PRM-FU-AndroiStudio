@@ -1,6 +1,8 @@
 package com.example.fptu;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -58,8 +60,14 @@ public class UserProfileActivity extends AppCompatActivity {
                 intent.putExtra("PHONE", phone.getText().toString());
 
                 activityResultLauncher.launch(intent);
+
             }
         });
+
+        //get data from login
+        SharedPreferences sharedPreferences = getSharedPreferences("USERINFO", Context.MODE_PRIVATE);
+        String username = sharedPreferences.getString("USERNAME", "");
+        firstName.setText(username);
 
     }
 

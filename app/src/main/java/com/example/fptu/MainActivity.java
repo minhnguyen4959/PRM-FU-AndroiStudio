@@ -2,7 +2,9 @@ package com.example.fptu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -72,7 +74,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
                 startActivity(intent);
-           
+
+                //sent data from form login to user profile
+                SharedPreferences sharedPreferences = getSharedPreferences("USERINFO", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("USERNAME", username);
+                editor.putString("PASSWORD", password);
+                editor.commit();
+
+
+
             }
         });
 
